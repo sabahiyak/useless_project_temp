@@ -3,9 +3,10 @@ import { AnalysisResponse } from "./types";
 // ─── API Base URL ────────────────────────────────────────────────────────────
 // Set NEXT_PUBLIC_API_URL in Vercel → Project → Settings → Environment Variables
 // For local dev, create frontend/.env.local with:
-//   NEXT_PUBLIC_API_URL=http://localhost:8000
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+//   NEXT_PUBLIC_API_URL=https://useless-project-temp-xjij.onrender.com/
+const API_BASE_URL = (
+  process.env.NEXT_PUBLIC_API_URL || "https://useless-project-temp-xjij.onrender.com/"
+).replace(/\/$/, "");
 
 // ─── Error Class ─────────────────────────────────────────────────────────────
 export class ApiError extends Error {
